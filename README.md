@@ -6,9 +6,9 @@ Proyecto realizado como laboratorio universitario de HTML5 y CSS3. El sitio pres
 
 ## Integrantes
 
-- [NOMBRE DEL INTEGRANTE 1]
-- [NOMBRE DEL INTEGRANTE 2]
-- [NOMBRE DEL INTEGRANTE 3]
+- Santiago Lopez
+- Maria Rodriguez
+- Danah Rodriguez
 
 ## Tecnologías
 
@@ -21,8 +21,9 @@ Proyecto realizado como laboratorio universitario de HTML5 y CSS3. El sitio pres
 - `public/biografia1.html`
 - `public/biografia2.html`
 - `public/biografia3.html`
+- `assets/img`
 - `style.css`
 
 ## Sitio publicado
 
-[URL DEL SITIO PUBLICADO]
+[[URL DEL SITIO PUBLICADO](https://santty1906.github.io/laboratorio-1-biografia-web/index.html)]
