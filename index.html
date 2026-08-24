@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuestra biografía en la Web</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Encabezado principal del sitio -->
+    <header class="encabezado">
+      <div class="contenedor encabezado__contenido">
+        <p class="etiqueta-sitio">Trabajo universitario de HTML5 y CSS3</p>
+        <h1>Nuestra biografía en la Web</h1>
+        <p>
+          Este sitio presenta a un equipo de tres estudiantes universitarios y
+          reúne la información principal de cada integrante en su propia
+          biografía.
+        </p>
+      </div>
+    </header>
+
+    <!-- Menú de navegación principal -->
+    <nav class="navegacion" aria-label="Menú principal">
+      <div class="contenedor">
+        <ul class="menu-principal">
+          <li><a class="activo" href="index.html">Inicio</a></li>
+          <li>
+            <a href="public/biografia1.html">Biografía del integrante 1</a>
+          </li>
+          <li>
+            <a href="public/biografia2.html">Biografía del integrante 2</a>
+          </li>
+          <li>
+            <a href="public/biografia3.html">Biografía del integrante 3</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Contenido principal de la página de inicio -->
+    <main class="contenedor contenido-principal">
+      <section class="seccion tarjeta-destacada">
+        <article>
+          <h2>Introducción al equipo</h2>
+          <p>
+            El grupo está conformado por tres integrantes que trabajan en
+            conjunto para desarrollar esta biografía web como práctica de
+            laboratorio.
+          </p>
+          <p>
+            Cada miembro cuenta con una página individual donde se presenta su
+            formación, intereses, hobbies y metas futuras.
+          </p>
+        </article>
+      </section>
+
+      <section class="seccion">
+        <h2>Integrantes del equipo</h2>
+        <p>
+          A continuación se identifican los tres integrantes del proyecto con
+          sus enlaces directos a la biografía correspondiente.
+        </p>
+
+        <div class="tarjetas-equipo">
+          <article class="tarjeta-integrante">
+            <p class="numero-integrante">1</p>
+            <h3>[NOMBRE DEL INTEGRANTE 1]</h3>
+            <p>Biografía individual del integrante 1.</p>
+            <a class="enlace-secundario" href="public/biografia1.html">
+              Ver biografía
+            </a>
+          </article>
+
+          <article class="tarjeta-integrante">
+            <p class="numero-integrante">2</p>
+            <h3>[NOMBRE DEL INTEGRANTE 2]</h3>
+            <p>Biografía individual del integrante 2.</p>
+            <a class="enlace-secundario" href="public/biografia2.html">
+              Ver biografía
+            </a>
+          </article>
+
+          <article class="tarjeta-integrante">
+            <p class="numero-integrante">3</p>
+            <h3>[NOMBRE DEL INTEGRANTE 3]</h3>
+            <p>Biografía individual del integrante 3.</p>
+            <a class="enlace-secundario" href="public/biografia3.html">
+              Ver biografía
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="seccion tarjeta-destacada">
+        <article>
+          <h2>Presentación visual del equipo</h2>
+          <p>
+            La siguiente vista resume al equipo de forma visual y sirve como
+            acceso directo a las páginas de cada integrante.
+          </p>
+          <div
+            class="resumen-visual"
+            aria-label="Resumen visual de los integrantes"
+          >
+            <div class="bloque-visual">
+              <span>1</span>
+              <strong>[NOMBRE DEL INTEGRANTE 1]</strong>
+            </div>
+            <div class="bloque-visual">
+              <span>2</span>
+              <strong>[NOMBRE DEL INTEGRANTE 2]</strong>
+            </div>
+            <div class="bloque-visual">
+              <span>3</span>
+              <strong>[NOMBRE DEL INTEGRANTE 3]</strong>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- Pie de página del sitio -->
+    <footer class="pie-pagina">
+      <div class="contenedor">
+        <p>Laboratorio #1</p>
+        <p>© Propiedad de Santiago Lopez, Maria Rodriguez y Danah Rodriguez</p>
+      </div>
+    </footer>
+  </body>
+</html>

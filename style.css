@@ -1,0 +1,343 @@
+/* Estilos generales */
+:root {
+  --color-fondo: #f3efe7;
+  --color-fondo-secundario: #ffffff;
+  --color-texto: #243041;
+  --color-texto-suave: #5f6b7a;
+  --color-primario: #1f5c63;
+  --color-primario-oscuro: #17454a;
+  --color-borde: #d8d1c5;
+  --sombra-suave: 0 10px 30px rgba(36, 48, 65, 0.08);
+  --radio: 18px;
+  --ancho-contenido: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+  color: var(--color-texto);
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(31, 92, 99, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(180deg, #faf7f2 0%, var(--color-fondo) 100%);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+.contenedor {
+  width: min(100% - 2rem, var(--ancho-contenido));
+  margin: 0 auto;
+}
+
+.seccion {
+  margin-bottom: 2rem;
+}
+
+/* Encabezado */
+.encabezado {
+  padding: 3.5rem 0 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-primario-oscuro),
+    var(--color-primario)
+  );
+  color: #ffffff;
+}
+
+.encabezado--biografia {
+  padding-bottom: 1.5rem;
+}
+
+.encabezado__contenido {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.encabezado h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+}
+
+.encabezado p {
+  margin: 0;
+  max-width: 70ch;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.etiqueta-sitio {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Menú de navegación */
+.navegacion {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(36, 48, 65, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.menu-principal {
+  list-style: none;
+  margin: 0;
+  padding: 0.85rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.menu-principal a {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  color: var(--color-texto);
+  background: rgba(31, 92, 99, 0.07);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.menu-principal a:hover,
+.menu-principal a:focus-visible,
+.menu-principal a.activo {
+  background: var(--color-primario);
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* Contenido principal */
+.contenido-principal {
+  padding: 2rem 0 3rem;
+}
+
+.tarjeta-destacada,
+.tarjeta-bio,
+.tarjeta-integrante,
+.tarjeta-imagen {
+  background: var(--color-fondo-secundario);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra-suave);
+}
+
+.tarjeta-destacada,
+.tarjeta-bio {
+  padding: 1.5rem;
+}
+
+.tarjeta-destacada h2,
+.tarjeta-bio h2,
+.seccion > h2 {
+  margin-top: 0;
+  color: var(--color-primario-oscuro);
+}
+
+.tarjeta-destacada p:last-child,
+.tarjeta-bio p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tarjetas del equipo */
+.tarjetas-equipo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.tarjeta-integrante {
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.numero-integrante {
+  width: 3rem;
+  height: 3rem;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(31, 92, 99, 0.12);
+  color: var(--color-primario-oscuro);
+  font-weight: 700;
+}
+
+.tarjeta-integrante h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.enlace-secundario {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: var(--color-primario);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.resumen-visual {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.bloque-visual {
+  padding: 1.25rem;
+  border-radius: var(--radio);
+  background: linear-gradient(180deg, #f6fbfb, #e9f4f4);
+  border: 1px dashed rgba(31, 92, 99, 0.25);
+  display: grid;
+  gap: 0.5rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.bloque-visual span {
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-primario);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Biografías */
+.contenido-biografia {
+  display: grid;
+  gap: 2rem;
+}
+
+.nombre-integrante {
+  margin-top: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-primario-oscuro);
+}
+
+.lista-datos {
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.lista-datos div {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.lista-datos div:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.lista-datos dt {
+  font-weight: 700;
+  color: var(--color-primario-oscuro);
+}
+
+.lista-datos dd {
+  margin: 0.25rem 0 0;
+  color: var(--color-texto-suave);
+}
+
+.lista-hobbies {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+/* Imágenes */
+.galeria-imagenes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.tarjeta-imagen {
+  overflow: hidden;
+}
+
+.tarjeta-imagen img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.tarjeta-imagen figcaption {
+  padding: 1rem 1.1rem;
+  color: var(--color-texto-suave);
+}
+
+/* Pie de página */
+.pie-pagina {
+  padding: 1.5rem 0 2rem;
+  border-top: 1px solid rgba(36, 48, 65, 0.08);
+  color: var(--color-texto-suave);
+}
+
+.pie-pagina p {
+  margin: 0;
+  text-align: center;
+}
+
+/* Diseño adaptable */
+@media (max-width: 720px) {
+  .encabezado {
+    padding-top: 2.5rem;
+  }
+
+  .menu-principal {
+    justify-content: center;
+  }
+
+  .tarjeta-destacada,
+  .tarjeta-bio,
+  .tarjeta-integrante {
+    padding: 1.1rem;
+  }
+}
